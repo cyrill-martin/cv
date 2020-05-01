@@ -7,16 +7,29 @@
     	<meta property="og:image" content="https://cyrillmartin.ch/cmimage.png"/>
     	<meta property="og:description" content="Information and Data Manager with a strong systems thinking approach · Dedicated to interdisciplinary perspectives on information retrieval and knowledge transfer · Skilled in structuring content for humans and machines"/>
     	<meta property="og:url" content="https://cyrillmartin.ch"/>
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 		<title>Cyrill Martin | Curriculum Vitae</title>
-		<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 		<script src="https://kit.fontawesome.com/cb930a01ab.js"></script>
 		<style>
-			body {
-				font-family: 'Roboto', sans-serif;
-				font-size: 14pt;
+			@import url("fonts.css");
+
+			* {
+				box-sizing: border-box;
+			}
+
+			*:before,
+			*:after {
+				box-sizing: border-box;
+			}
+
+			html body {
+				font-family: 'Tex Gyre Heros';
+				font-size: 1.2em;
 				text-align: center;
-				cursor: default
+				cursor: default;
 				width: 100%;
+				margin: 0 0 0 0;
+				padding: 0 0 0 0;
 			}
 
 			a:link, a:visited {
@@ -28,19 +41,17 @@
 			}
 
 			i {
-				margin-right: 0.5em;
+				padding-right: 0.5em;
 			}
 
 			h1 {
-				font-size: 3.5em;
-
+				font-size: 2.5em;
 			}
 
 			h2 {
-				font-size: 2em;
+				font-size: 1.5em;
 				margin-top: 2em;
 				line-height: 0.5em;
-
 			}
 
 			h2:after {
@@ -52,7 +63,7 @@
 			}
 
 			h4 {
-				font-size: 1.3em;
+				font-size: 1.2em;
 				padding-bottom: 0;
 				margin-bottom: 0;
 			}
@@ -84,7 +95,8 @@
 
 			#main {
 				width: 100%;
-				min-width: 1300px;
+				min-width: 1400px;
+				margin: 0;
 			}
 
 			#main_left {
@@ -106,7 +118,8 @@
 			}
 
 			#description {
-				font-size: 1.3em;
+				font-size: 1.1em;
+				font-family: 'Liberation Mono';
 			}
 
 			#personal {
@@ -120,7 +133,7 @@
 				min-width: 178px;
 				display: inline-block;
 				float: left;
-				font-size: 2.0em;
+				font-size: 1.5em;
 			}
 
 			#details {
@@ -173,9 +186,12 @@
 			}
 
 			.job {
-				border-radius: 10px;
-				padding-left: 5px;
-				padding-right: 5px;
+				border-radius: 6px;
+				padding: 0 10px 0 10px;
+			}
+
+			.company {
+
 			}
 
 			.period {
@@ -183,7 +199,7 @@
 			}
 
 			.task {
-				font-size: 1em;
+				font-family: 'Liberation Mono';
 			}
 
 			#projectArea {
@@ -263,11 +279,12 @@
 
 			#footer {
 				width: 100%;
-				min-height: 250px;
-				display: inline-block;
-				background-color: #E9EBEA;
+				height: 250px;
+				background: #a8ff78;  /* fallback for old browsers */
+				background: -webkit-linear-gradient(to right, #B3BAB6, #C9D5A6);  /* Chrome 10-25, Safari 5.1-6 */
+				background: linear-gradient(to right, #B3BAB6, #C9D5A6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 				text-align: center;
-				margin-top: 200px;
+				margin: 200px 0 0 0;
 				padding-top: 50px;
 			}
 
@@ -344,7 +361,7 @@
 				}).attr("y2", function (d, i) {
 					return rScale(maxValue * 1.1) * Math.sin(angleSlice * i - Math.PI / 2)
 				}).attr("class", "line").style("stroke", "white").style("stroke-width", "0.5px");
-				axis.append("text").attr("class", "legend").style("font-size", "14px").attr("text-anchor", "middle").attr("dy", "0.35em").attr("x", function (d, i) {
+				axis.append("text").attr("class", "legend").style("font-size", "0.6em").attr("text-anchor", "middle").attr("dy", "0.35em").attr("x", function (d, i) {
 					return rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice * i - Math.PI / 2)
 				}).attr("y", function (d, i) {
 					return rScale(maxValue * cfg.labelFactor) * Math.sin(angleSlice * i - Math.PI / 2)
@@ -353,7 +370,7 @@
 				}).call(wrap, cfg.wrapWidth);
 				axisGrid.selectAll(".axisLabel").data(d3.range(1, (cfg.levels + 1)).reverse()).enter().append("text").attr("class", "axisLabel").attr("x", -11).attr("y", function (d) {
 					return -d * radius / cfg.levels
-				}).attr("dy", "0.4em").style("font-size", "10px").attr("fill", "#737373").text(function (d, i) {
+				}).attr("dy", "0.4em").style("font-size", "0.6em").attr("fill", "#737373").text(function (d, i) {
 					return Format(maxValue * d / cfg.levels)
 				});
 				var radarLine = d3.svg.line.radial().interpolate("linear-closed").radius(function (d) {
@@ -498,6 +515,7 @@
 								<a href="mailto:cyrill.martin@gmail.com" target="_top"><i class="far fa-envelope"></i></a>
 								<a href="https://ch.linkedin.com/in/cyrill-martin-b7177a12b" target="_blank"><i class="fab fa-linkedin-in"></i></a>
 								<a href="https://twitter.com/cyrill_martin" target="_blank"><i class="fab fa-twitter"></i></a>
+								<a href="https://github.com/cyrill-martin" target="_blank"><i class="fab fa-github"></i></a>
 							</p>
 						</div>
 				    </div> <!-- personal -->
@@ -617,13 +635,13 @@
 			    		<h2>Digital</h2>
 						<div class="labels">
 		    				<b>Programming</b><br/>
-		    				<b>Querying</b><br/>
+		    				<b>Query</b><br/>
 		    				<b>Web</b><br/>
 		    			</div>
 		    			<div class="values">
-		    				Ruby · R · JavaScript / D3.js<br/>
+		    				Ruby · Python · JavaScript · D3.js · XSLT<br/>
 		    				SQL · XPath<br/>
-		    				HTML/CSS · Ruby on Rails · Jekyll<br/>
+		    				HTML · CSS · Ruby on Rails · Jekyll · Flask<br/>
 		    			</div>
 			    	</div>
 			    	<div id="language">
