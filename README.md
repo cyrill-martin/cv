@@ -1,3 +1,3 @@
-# cyrillmartin.ch
+# CV
 
-This is the one file (+ two images) for cyrillmartin.ch: HTML, CSS, D3.js.
+This is the one file (+ two images) for my online CV: HTML, CSS, D3.js.
