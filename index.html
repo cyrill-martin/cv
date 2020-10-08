@@ -832,11 +832,19 @@
 			let fixmeTop = $("#experienceChart").offset().top;
 			$(window).scroll(function() {
 			    let currentScroll = $(window).scrollTop();
+			    let windowWidth = $(window).width();
+		    	let left = "";
+		    	if (windowWidth > 1400) {
+		    		left = "200px";
+		    	} else {
+		    		left = "50px";
+		    	};
 			    if (currentScroll >= fixmeTop && currentScroll < 2450) {
 			        $("#experienceChart").css({
 			            position: "fixed",
 			            top: "0",
-			            left: "50px"
+			            // left: "50px"
+			            left: left
 			        });
 			        $(".experience").css({
 			        	float: "right"
@@ -845,7 +853,8 @@
 			        $("#experienceChart").css({
 			            position: "absolute",
 			            top: "2451px",
-			            left: "50px"
+			            // left: "50px"
+			            left: left
 			        });
 			        $(".experience").css({
 			        	float: "right"
