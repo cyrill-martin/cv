@@ -413,7 +413,7 @@
 				}).on("mouseout", function () {
 					tooltip.transition().duration(200).style("opacity", 0)
 				});
-				var tooltip = g.append("text").attr("class", "tooltip").style("opacity", 0);
+				var tooltip = g.append("text").attr("class", "tooltip").style("opacity", 0).style("font-size", "0.8em");
 
 				function wrap(text, width) {
 					text.each(function () {
@@ -731,8 +731,8 @@
 			var schools = 	[
 			  	[//Master
 					{axis:"Science",value:1.0},
-					{axis:"Social Sciences",value:0.60},
-					{axis:"Economics",value:0.50}
+					{axis:"Social Sciences",value:0.75},
+					{axis:"Economics",value:0.65}
 			  	],
 			  	[//Bachelor
 					{axis:"Science",value:1.0},
@@ -810,7 +810,7 @@
 			let fixmeTop = $("#experienceChart").offset().top;
 			$(window).scroll(function() {
 			    let currentScroll = $(window).scrollTop();
-			    if (currentScroll >= fixmeTop && currentScroll < 1566) {
+			    if (currentScroll >= fixmeTop && currentScroll < 1650) {
 			        $("#experienceChart").css({
 			            position: "fixed",
 			            top: "0",
@@ -820,10 +820,10 @@
 			        $(".experience").css({
 			        	float: "right"
 			        });
-			    } else if (currentScroll >= fixmeTop && currentScroll > 1566) {
+			    } else if (currentScroll >= fixmeTop && currentScroll > 1650) {
 			        $("#experienceChart").css({
 			            position: "absolute",
-			            top: "1567px",
+			            top: "1651px",
 			            // left: "50px"
 			            left: "2%"
 			        });
