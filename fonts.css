@@ -61,3 +61,114 @@
     font-style: normal;
 
 }
+
+@font-face {
+font-family: 'Tanohe Sans Regular';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-Regular.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Italic';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-Italic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Thin';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-Thin.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Thin Italic';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-ThinItalic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Light';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-Light.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Light Italic';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-LightItalic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Medium';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-Medium.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Medium Italic';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-MediumItalic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans SemiBold';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-SemiBold.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans SemiBold Italic';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-SemiBoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Bold';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-Bold.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Bold Italic';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-BoldItalic.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Black';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-Black.woff') format('woff');
+}
+
+
+@font-face {
+font-family: 'Tanohe Sans Black Italic';
+font-style: normal;
+font-weight: normal;
+src: url('fonts/TanoheSans-BlackItalic.woff') format('woff');
+}
