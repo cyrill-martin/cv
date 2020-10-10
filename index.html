@@ -1,7 +1,29 @@
 <!DOCTYPE html>
+<!-- Copyright 2020 Cyrill Martin
+
+Permission is hereby granted, free of charge, to any person 
+obtaining a copy of this software and associated documentation 
+files (the "Software"), to deal in the Software without 
+restriction, including without limitation the rights to use, 
+copy, modify, merge, publish, distribute, sublicense, and/or 
+sell copies of the Software, and to permit persons to whom 
+the Software is furnished to do so, subject to the 
+following conditions:
+
+The above copyright notice and this permission notice shall 
+be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR 
+PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS 
+OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR 
+OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR 
+OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH 
+THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. -->
 <html>
 	<head>
-		<meta name="robots" content="noindex">
+		<meta name="robots" content="index,follow">
 		<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/ >
 		<meta property="og:title" content="Cyrill Martin | Curriculum Vitae"/>
     	<meta property="og:image" content="https://cyrill-martin.github.io/cv/cmimage.png"/>
@@ -25,11 +47,8 @@
 			html body {
 				font-family: 'Tanohe Sans Medium';
 				font-size: 16px;
-				text-align: center;
-				cursor: default;
-				width: 100%;
-				margin: 0 0 0 0;
-				padding: 0 0 0 0;
+				margin: 0;
+				padding: 0;
 			}
 
 			a:link, a:visited {
@@ -70,14 +89,11 @@
 
 			h5 {
 				font-size: 1em;
-				padding-top: 0;
-				margin-top: 0;
-				padding-bottom: 2px;
-				margin-bottom: 2px;
+				padding: 0 0 2px 0;
+				margin: 0 0 2px 0;
 			}
 
 			#header {
-
 			}
 
 			#top_header {
@@ -89,8 +105,6 @@
 				display: inline-block;
 				width: 100%;
 				height: 35px;
-				text-align: left;
-				padding-right: 5px;
 			}
 
 			#main {
@@ -101,12 +115,9 @@
 			#mainmain {
 				width: 1341px;
 				padding: 0 2% 0 2%;
-				text-align: left;
 			}
 
 			#intro {
-				width: 100%;
-				display: inline-block;
 			}
 
 			#description {
@@ -126,12 +137,6 @@
 				display: inline-block;
 				float: left;
 				font-size: 2em;
-			}
-
-			#details {
-				width: 50%;
-				display: inline-block;
-				float: left;
 			}
 
 			.labels {
@@ -265,12 +270,6 @@
 			#footer {
 				width: 100%;
 				height: 150px;
-				/* fallback for old browsers */
-				/* background: #a8ff78; */
-				/* Chrome 10-25, Safari 5.1-6 */
-				/* background: -webkit-linear-gradient(to right, #B3BAB6, #C9D5A6); */
-				/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */  
-				/* background: linear-gradient(to right, #B3BAB6, #C9D5A6); */ 
 				text-align: center;
 				margin: 200px 0 0 0;
 				padding-top: 50px;
@@ -280,10 +279,9 @@
 				fill: #333333;
 			}
 		</style>
-		<!-- D3.js -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script type="text/javascript">		
+		<script>	
 			//////////////////////////////////////////////////////////
 			/////////////// The Radar Chart Function /////////////////
 			/////////////// Written by Nadieh Bremer /////////////////
@@ -296,7 +294,7 @@
 			/// License: MIT (https://opensource.org/licenses/MIT) ///
 			//////////////////////////////////////////////////////////
 			function radarChart(id, data, options) {
-				var cfg = {
+				let cfg = {
 					w: 600,
 					h: 600,
 					margin: {
@@ -319,32 +317,32 @@
 					caseColor: ""
 				};
 				if ('undefined' !== typeof options) {
-					for (var i in options) {
+					for (let i in options) {
 						if ('undefined' !== typeof options[i]) {
 							cfg[i] = options[i]
 						}
 					}
 				}
-				var maxValue = Math.max(cfg.maxValue, d3.max(data, function (i) {
+				let maxValue = Math.max(cfg.maxValue, d3.max(data, function (i) {
 					return d3.max(i.map(function (o) {
 						return o.value
 					}))
 				}));
-				var allAxis = (data[0].map(function (i, j) {
+				let allAxis = (data[0].map(function (i, j) {
 						return i.axis
 					})),
 					total = allAxis.length,
 					radius = Math.min(cfg.w / 2, cfg.h / 2),
 					Format = d3.format(''),
 					angleSlice = Math.PI * 2 / total;
-				var rScale = d3.scale.linear().range([0, radius]).domain([0, maxValue]);
-				var svg = d3.select(id).append("svg").attr("width", cfg.w + cfg.margin.left + cfg.margin.right).attr("height", cfg.h + cfg.margin.top + cfg.margin.bottom).attr("id", "svg" + id);
-				var g = svg.append("g").attr("transform", "translate(" + (cfg.w / 2 + cfg.margin.left) + "," + (cfg.h / 2 + cfg.margin.top) + ")");
-				var axisGrid = g.append("g").attr("class", "axisWrapper");
+				let rScale = d3.scale.linear().range([0, radius]).domain([0, maxValue]);
+				let svg = d3.select(id).append("svg").attr("width", cfg.w + cfg.margin.left + cfg.margin.right).attr("height", cfg.h + cfg.margin.top + cfg.margin.bottom).attr("id", "svg" + id);
+				let g = svg.append("g").attr("transform", "translate(" + (cfg.w / 2 + cfg.margin.left) + "," + (cfg.h / 2 + cfg.margin.top) + ")");
+				let axisGrid = g.append("g").attr("class", "axisWrapper");
 				axisGrid.selectAll(".levels").data(d3.range(1, (cfg.levels + 1)).reverse()).enter().append("circle").attr("class", "gridCircle").attr("r", function (d, i) {
 					return radius / cfg.levels * d
 				}).style("fill", "white").style("stroke", "#CDCDCD").style("fill-opacity", cfg.opacityCircles);
-				var axis = axisGrid.selectAll(".axis").data(allAxis).enter().append("g").attr("class", "axis");
+				let axis = axisGrid.selectAll(".axis").data(allAxis).enter().append("g").attr("class", "axis");
 				axis.append("line").attr("x1", 0).attr("y1", 0).attr("x2", function (d, i) {
 					return rScale(maxValue * 1.1) * Math.cos(angleSlice * i - Math.PI / 2)
 				}).attr("y2", function (d, i) {
@@ -362,7 +360,7 @@
 				}).attr("dy", "0.4em").style("font-size", "0.8em").attr("fill", "#737373").text(function (d, i) {
 					return Format(maxValue * d / cfg.levels)
 				});
-				var radarLine = d3.svg.line.radial().interpolate("linear-closed").radius(function (d) {
+				let radarLine = d3.svg.line.radial().interpolate("linear-closed").radius(function (d) {
 					return rScale(d.value)
 				}).angle(function (d, i) {
 					return i * angleSlice
@@ -370,7 +368,7 @@
 				if (cfg.roundStrokes) {
 					radarLine.interpolate("cardinal-closed")
 				}
-				var blobWrapper = g.selectAll(".radarWrapper").data(data).enter().append("g").attr("class", "radarWrapper");
+				let blobWrapper = g.selectAll(".radarWrapper").data(data).enter().append("g").attr("class", "radarWrapper");
 				blobWrapper.append("path").attr("class", cfg.case+"Area").attr("id", function (d, i) {
 					return cfg.case+"Area_" + i
 				}).attr("d", function (d, i) {
@@ -378,13 +376,13 @@
 				}).style("fill", function (d, i) {
 					return cfg.color(i)
 				}).style("fill-opacity", cfg.opacityArea).on('mouseover', function (d, i) {
-					var id = d3.select(this).attr("id").slice(8, 10);
+					let id = d3.select(this).attr("id").slice(8, 10);
 					d3.selectAll("." + cfg.case).style("background-color", "");
 					d3.selectAll("." + cfg.case+"Area").transition().duration(200).style("fill-opacity", 0.1);
 					d3.select(this).transition().duration(200).style("fill-opacity", 0.9);
 					d3.select("#" + cfg.case+"_" + id).style("background-color", cfg.caseColor)
 				}).on('mouseout', function () {
-					var id = d3.select(this).attr("id").slice(8, 10);
+					let id = d3.select(this).attr("id").slice(8, 10);
 					d3.selectAll("." + cfg.case+"Area").transition().duration(200).style("fill-opacity", cfg.opacityArea);
 					d3.select("#" + cfg.case+"_" + id).style("background-color", "")
 				});
@@ -402,7 +400,7 @@
 				}).style("fill", function (d, i, j) {
 					return cfg.color(j)
 				}).style("fill-opacity", 0.8);
-				var blobCircleWrapper = g.selectAll(".radarCircleWrapper").data(data).enter().append("g").attr("class", "radarCircleWrapper");
+				let blobCircleWrapper = g.selectAll(".radarCircleWrapper").data(data).enter().append("g").attr("class", "radarCircleWrapper");
 				blobCircleWrapper.selectAll(".radarInvisibleCircle").data(function (d, i) {
 					return d
 				}).enter().append("circle").attr("class", "radarInvisibleCircle").attr("r", cfg.dotRadius * 1.5).attr("cx", function (d, i) {
@@ -416,11 +414,11 @@
 				}).on("mouseout", function () {
 					tooltip.transition().duration(200).style("opacity", 0)
 				});
-				var tooltip = g.append("text").attr("class", "tooltip").style("opacity", 0).style("font-size", "0.8em");
+				let tooltip = g.append("text").attr("class", "tooltip").style("opacity", 0).style("font-size", "0.8em");
 
 				function wrap(text, width) {
 					text.each(function () {
-						var text = d3.select(this),
+						let text = d3.select(this),
 							words = text.text().split(/\s+/).reverse(),
 							word, line = [],
 							lineNumber = 0,
@@ -445,7 +443,7 @@
 
 			function mouseJobs() {
 				d3.selectAll(".job").on("mouseover", function () {
-					var jobId = d3.select(this).attr("id").slice(4, 6);
+					let jobId = d3.select(this).attr("id").slice(4, 6);
 					d3.selectAll(".jobArea").transition().duration(200).style("fill-opacity", 0.1);
 					d3.select("#jobArea_" + jobId).transition().duration(200).style("fill-opacity", 0.9);
 					d3.selectAll(".job").style("background-color", "");
@@ -458,7 +456,7 @@
 
 			function mouseProjects() {
 				d3.selectAll(".project").on("mouseover", function () {
-					var jobId = d3.select(this).attr("id").slice(4, 6);
+					let jobId = d3.select(this).attr("id").slice(4, 6);
 					d3.selectAll(".prjArea").transition().duration(200).style("fill-opacity", 0.1);
 					d3.select("#prjArea_" + jobId).transition().duration(200).style("fill-opacity", 0.9);
 					d3.selectAll(".project").style("background-color", "");
@@ -471,7 +469,7 @@
 
 			function mouseSchools() {
 				d3.selectAll(".school").on("mouseover", function () {
-					var schoolId = d3.select(this).attr("id").slice(4, 6);
+					let schoolId = d3.select(this).attr("id").slice(4, 6);
 					d3.selectAll(".sclArea").transition().duration(200).style("fill-opacity", 0.1);
 					d3.select("#sclArea_" + schoolId).transition().duration(200).style("fill-opacity", 0.9);
 					d3.select(this).style("background-color", "#EFF3E5")
@@ -659,19 +657,9 @@
 		  	<div id="footer">
 			</div> <!-- footer -->
 		</div> <!-- main -->
-
 		<script>
-    		/* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */
-
-			////////////////////////////////////////////////////////////// 
-			//////////////////////// Set-Up ////////////////////////////// 
-			////////////////////////////////////////////////////////////// 
-			
-			////////////////////////////////////////////////////////////// 
-			////////////////////////// Data ////////////////////////////// 
-			////////////////////////////////////////////////////////////// 
-								
-			var jobs = 	[
+    		/* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */				
+			let jobs = 	[
 			  	[//Tool Coordinator and Developer
 					{axis:"Design",value:0.40},
 					{axis:"Management",value:0.15},
@@ -722,7 +710,7 @@
 				]
 			];
 
-			var projects = [
+			let projects = [
 			  	[//kmapper
 					{axis:"Design",value:0.80},
 					{axis:"Management",value:0.0},
@@ -731,7 +719,7 @@
 			  	]
 			];
 
-			var schools = 	[
+			let schools = 	[
 			  	[//Master
 					{axis:"Science",value:1.0},
 					{axis:"Social Sciences",value:0.75},
@@ -748,17 +736,17 @@
 			//////////////////// Draw the Charts /////////////////////////
 			////////////////////////////////////////////////////////////// 
 
-			var margin = {top: 100, right: 100, bottom: 100, left: 100},
+			let margin = {top: 100, right: 100, bottom: 100, left: 100},
 				width = 450,
 				height = 450;
 
-			var jobColor = d3.scale.ordinal()
+			let jobColor = d3.scale.ordinal()
 				.range(["#263A2F","#283e32","#324d3e","#3c5d4b","#476c57","#517b64","#5b8b70"]);
 
-			var schoolColor = d3.scale.ordinal()
+			let schoolColor = d3.scale.ordinal()
 				.range(["#658601","#A9CA00"]);
 			
-			var jobChartOptions = {
+			let jobChartOptions = {
 				w: width,
 			  	h: height,
 			  	margin: margin,
@@ -770,7 +758,7 @@
 			  	caseColor: "#E9EBEA"
 			};
 
-			var projectChartOptions = {
+			let projectChartOptions = {
 				w: width,
 			  	h: height,
 			  	margin: margin,
@@ -782,7 +770,7 @@
 			  	caseColor: "#E9EBEA"
 			};
 
-			var schoolChartOptions = {
+			let schoolChartOptions = {
 				w: width,
 			  	h: height,
 			  	margin: margin,
@@ -794,22 +782,22 @@
 			  	caseColor: "#EFF3E5"
 			};
 			
-			//Call function to draw the Radar charts
+			// Call functions to draw the radar charts
 			radarChart("#experienceChart", jobs, jobChartOptions);
 			radarChart("#projectChart", projects, projectChartOptions);
 			radarChart("#educationChart", schools, schoolChartOptions);
 
-			//Call mouse events
+			// Call mouse events
 			mouseJobs();
 			mouseProjects();
 			mouseSchools();
-		</script>
-		<script>
+
+			// Initial job selection
 			d3.selectAll(".jobArea").style("fill-opacity", "0.1");
 			d3.select("#jobArea_0").style("fill-opacity", "0.9");
 			d3.select("#job_0").style("background-color", "#E9EBEA");
-		</script>
-		<script>
+
+			// Fix the experience chart when scrolling
 			let fixmeTop = $("#experienceChart").offset().top;
 			$(window).scroll(function() {
 			    let currentScroll = $(window).scrollTop();
