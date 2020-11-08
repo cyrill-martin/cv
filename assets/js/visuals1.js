@@ -48,9 +48,9 @@ function radarChart(id, data, options) {
             return i.axis
         })),
         total = allAxis.length,
-        radius = Math.min(cfg.w / 2, cfg.h / 2),
+        radius = Math.min(cfg.w/2, cfg.h/2),
         Format = d3.format(''),
-        angleSlice = Math.PI * 2 / total;
+        angleSlice = Math.PI * 2/total;
     let rScale = d3.scale.linear()
         .range([0, radius])
         .domain([0, maxValue]);
@@ -60,7 +60,7 @@ function radarChart(id, data, options) {
         .attr("height", cfg.h + cfg.margin.top + cfg.margin.bottom)
         .attr("id", "svg" + id);
     let g = svg.append("g")
-        .attr("transform", "translate(" + (cfg.w / 2 + cfg.margin.left) + "," + (cfg.h / 2 + cfg.margin.top) + ")");
+        .attr("transform", "translate(" + (cfg.w/2 + cfg.margin.left) + "," + (cfg.h/2 + cfg.margin.top) + ")");
     let axisGrid = g.append("g")
         .attr("class", "axisWrapper");
     axisGrid.selectAll(".levels")
@@ -70,7 +70,7 @@ function radarChart(id, data, options) {
         .append("circle")
         .attr("class", "gridCircle")
         .attr("r", function(d, i) {
-            return radius / cfg.levels * d
+            return radius/cfg.levels * d
         })
         .style("fill", "white")
         .style("stroke", "#CDCDCD")
@@ -84,10 +84,10 @@ function radarChart(id, data, options) {
         .attr("x1", 0)
         .attr("y1", 0)
         .attr("x2", function(d, i) {
-            return rScale(maxValue * 1.1) * Math.cos(angleSlice * i - Math.PI / 2)
+            return rScale(maxValue * 1.1) * Math.cos(angleSlice * i - Math.PI/2)
         })
         .attr("y2", function(d, i) {
-            return rScale(maxValue * 1.1) * Math.sin(angleSlice * i - Math.PI / 2)
+            return rScale(maxValue * 1.1) * Math.sin(angleSlice * i - Math.PI/2)
         })
         .attr("class", "line")
         .style("stroke", "white")
@@ -98,10 +98,10 @@ function radarChart(id, data, options) {
         .attr("text-anchor", "middle")
         .attr("dy", "0.35em")
         .attr("x", function(d, i) {
-            return rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice * i - Math.PI / 2)
+            return rScale(maxValue * cfg.labelFactor) * Math.cos(angleSlice * i - Math.PI/2)
         })
         .attr("y", function(d, i) {
-            return rScale(maxValue * cfg.labelFactor) * Math.sin(angleSlice * i - Math.PI / 2)
+            return rScale(maxValue * cfg.labelFactor) * Math.sin(angleSlice * i - Math.PI/2)
         })
         .text(function(d) {
             return d
@@ -118,10 +118,10 @@ function radarChart(id, data, options) {
             return -d * radius / cfg.levels
         })
         .attr("dy", "0.4em")
-        .style("font-size", "0.8em")
+        .style("font-size", "0.6em")
         .attr("fill", "#737373")
         .text(function(d, i) {
-            return Format(maxValue * d / cfg.levels)
+            return Format(maxValue * d/cfg.levels)
         });
     let radarLine = d3.svg.line.radial()
         .interpolate("linear-closed")
