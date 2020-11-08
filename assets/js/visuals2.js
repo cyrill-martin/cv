@@ -57,12 +57,6 @@ let projects = [
     {axis:"Data / Content",value:1.0},
     {axis:"Development",value:1.0}
   ],
-	[//kmapper
-		{axis:"Design",value:1.0},
-		{axis:"Management",value:1.0},
-		{axis:"Data / Content",value:1.0},
-		{axis:"Development",value:1.0}
-	],
   [//e-editiones
     {axis:"Design",value:0.50},
     {axis:"Management",value:0.1},
@@ -85,6 +79,18 @@ let projects = [
     {axis:"Design",value:0.8},
     {axis:"Management",value:0.1},
     {axis:"Data / Content",value:0.8},
+    {axis:"Development",value:1.0}
+  ],
+  [//kmapper
+    {axis:"Design",value:1.0},
+    {axis:"Management",value:1.0},
+    {axis:"Data / Content",value:1.0},
+    {axis:"Development",value:1.0}
+  ],
+  [//SVM
+    {axis:"Design",value:0.1},
+    {axis:"Management",value:0.8},
+    {axis:"Data / Content",value:1.0},
     {axis:"Development",value:1.0}
   ]
 ];
@@ -205,7 +211,7 @@ $(window).scroll(function() {
 let fixmeProjects = $("#projectChart").offset().top;
 $(window).scroll(function() {
     let currentScroll = $(window).scrollTop();
-    if (currentScroll >= fixmeProjects && currentScroll < 3120) {
+    if (currentScroll >= fixmeProjects && currentScroll < 3370) {
         $("#projectChart").css({
             position: "fixed",
             top: "0",
@@ -215,10 +221,10 @@ $(window).scroll(function() {
         $(".projects").css({
           float: "right"
         });
-    } else if (currentScroll >= fixmeProjects && currentScroll > 3120) {
+    } else if (currentScroll >= fixmeProjects && currentScroll > 3370) {
         $("#projectChart").css({
             position: "absolute",
-            top: "3121px",
+            top: "3370px",
             // left: "50px"
             left: "2%"
         });
