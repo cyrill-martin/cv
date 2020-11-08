@@ -1,0 +1,245 @@
+@import url("fonts.css");
+
+* {
+	box-sizing: border-box;
+}
+
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+html body {
+	font-family: 'Tanohe Sans Medium';
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+a:link, a:visited {
+	color: #000000; 
+}
+
+a:hover, a:active {
+	color: #517b64;
+}
+
+i {
+	padding-right: 0.5em;
+}
+
+h1 {
+	font-size: 3em;
+}
+
+h2 {
+	font-size: 2em;
+	margin-top: 2em;
+	line-height: 0.5em;
+}
+
+h2:after {
+	content: '';
+	background: #242424;
+	width: 100%;
+	height: 1px;
+	display: inline-block;
+}
+
+h4 {
+	font-size: 1.3em;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+h5 {
+	font-size: 1em;
+	padding: 0 0 2px 0;
+	margin: 0 0 2px 0;
+}
+
+#header {
+}
+
+#top_header {
+	display: inline-block;
+	width: 100%;
+}
+
+#bottom_header {
+	display: inline-block;
+	width: 100%;
+	height: 35px;
+}
+
+#main {
+	width: 100%;
+	margin: 0;
+}
+
+#mainmain {
+	width: 1341px;
+	padding: 0 2% 0 2%;
+}
+
+#intro {
+}
+
+#description {
+	font-size: 1.3em;
+	font-family: 'Tanohe Sans Regular';
+}
+
+#personal {
+	width: 70%;
+	display: inline-block;
+	float: left;
+}
+
+#contact {
+	width: 100%;
+	min-width: 178px;
+	display: inline-block;
+	float: left;
+	font-size: 2em;
+}
+
+.labels {
+	width: 25%;
+	display: inline-block;
+	float: left;
+}
+
+.values {
+	width: 70%;
+	display: inline-block;
+	float: left;
+	font-family: 'Tanohe Sans Regular';
+}
+
+#image {
+	width: 30%;
+	display: inline-block;
+	float: right;
+	text-align: right;
+}
+
+#photo {
+	width: 300px;
+	height: 300px;
+}
+
+#experienceArea {
+	width: 100%;
+	overflow: hidden;
+}
+
+#experienceChart {
+	width: 650px;
+	float: left;
+}
+
+.experience {
+	width: 600px;
+	overflow: hidden;
+	padding-left: 35px;
+}
+
+.job {
+	border-radius: 6px;
+	padding: 2px 10px 2px 10px;
+}
+
+.company {
+
+}
+
+.period {
+	color: grey;
+	font-family: 'Tanohe Sans Regular';
+	font-size: 1em;
+}
+
+.task {
+	font-family: 'Tanohe Sans Regular';
+	font-size: 1em;
+}
+
+#projectArea {
+	width: 100%;
+	overflow: hidden;
+}
+
+#projectChart {
+	width: 650px;
+	float: left;
+}
+
+.projects {
+	width: 600px;
+	overflow: hidden;
+	padding-left: 35px;
+}
+
+.project {
+	border-radius: 10px;
+	padding: 2px 10px 2px 10px;
+}
+
+#educationArea {
+	width: 100%;
+	overflow: hidden;
+}
+
+#educationChart {
+	width: 650px;
+	float: left;
+}
+
+.education {
+	width: 600px;
+	overflow: hidden;
+	padding-left: 35px;
+}
+
+.school {
+	border-radius: 10px;
+	padding: 2px 10px 2px 10px;
+}
+
+#further {
+	width: 100%;
+	display: inline-block;
+}
+
+	#digital {
+		width: 100%;
+		display: inline-block;
+	}
+
+	#language {
+		width: 100%;
+		display: inline-block;
+	}
+
+	#publication {
+		width: 100%;
+		display: inline-block;
+	}
+
+	#interest {
+		width: 100%;
+		display: inline-block;
+	}
+
+#footer {
+	width: 100%;
+	height: 150px;
+	text-align: center;
+	margin: 200px 0 0 0;
+	padding-top: 50px;
+}
+
+.tooltip {
+	fill: #333333;
+}
