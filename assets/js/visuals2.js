@@ -1,5 +1,11 @@
 /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */				
 let jobs = 	[
+  [//kmapper
+    {axis:"Design",value:0.80},
+    {axis:"Management",value:1.0},
+    {axis:"Data / Content",value:1.0},
+    {axis:"Development",value:1.0}
+  ],
   [//Tool Coordinator and Developer
   	{axis:"Design",value:0.40},
   	{axis:"Management",value:0.15},
@@ -190,7 +196,8 @@ $(window).scroll(function() {
     } else if (currentScroll >= fixmeExperience && currentScroll > 1650) {
         $("#experienceChart").css({
             position: "absolute",
-            top: "1651px",
+            // top: "1651px",
+            top: "1725px",
             // left: "50px"
             left: "2%"
         });
@@ -224,7 +231,8 @@ $(window).scroll(function() {
     } else if (currentScroll >= fixmeProjects && currentScroll > 3370) {
         $("#projectChart").css({
             position: "absolute",
-            top: "3370px",
+            // top: "3370px",
+            top: "3390px",
             // left: "50px"
             left: "2%"
         });

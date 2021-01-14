@@ -1,4 +1,4 @@
-@import url("fonts.css");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -10,8 +10,10 @@
 }
 
 html body {
-	font-family: 'Tanohe Sans Medium';
+	font-family: 'Lato', sans-serif;
 	font-size: 16px;
+	font-weight: 700;
+	color: #333447;
 	margin: 0;
 	padding: 0;
 }
@@ -87,7 +89,7 @@ h5 {
 
 #description {
 	font-size: 1.3em;
-	font-family: 'Tanohe Sans Regular';
+	font-weight: 300;
 }
 
 #personal {
@@ -114,7 +116,7 @@ h5 {
 	width: 70%;
 	display: inline-block;
 	float: left;
-	font-family: 'Tanohe Sans Regular';
+	font-weight: 300;
 }
 
 #image {
@@ -156,12 +158,12 @@ h5 {
 
 .period {
 	color: grey;
-	font-family: 'Tanohe Sans Regular';
+	font-weight: 300;
 	font-size: 0.9em;
 }
 
 .task {
-	font-family: 'Tanohe Sans Regular';
+	font-weight: 300;
 	font-size: 1em;
 }
 

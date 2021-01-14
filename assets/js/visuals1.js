@@ -95,6 +95,7 @@ function radarChart(id, data, options) {
     axis.append("text")
         .attr("class", "legend")
         .style("font-size", "0.8em")
+        .style("font-weight", "300")
         .attr("text-anchor", "middle")
         .attr("dy", "0.35em")
         .attr("x", function(d, i) {
@@ -249,7 +250,8 @@ function radarChart(id, data, options) {
     let tooltip = g.append("text")
         .attr("class", "tooltip")
         .style("opacity", 0)
-        .style("font-size", "0.8em");
+        .style("font-size", "0.8em")
+        .style("font-weight", "300");
 
     function wrap(text, width) {
         text.each(function() {
