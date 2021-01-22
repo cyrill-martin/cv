@@ -92,6 +92,11 @@ h5 {
 	font-weight: 300;
 }
 
+#hint {
+	font-size: 0.9em;
+	font-weight: 300;
+}
+
 #personal {
 	width: 70%;
 	display: inline-block;
