@@ -1,5 +1,11 @@
 /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */				
 let jobs = 	[
+  [//Roche
+    {axis:"Design",value:0.90},
+    {axis:"Management",value:0.1},
+    {axis:"Data / Content",value:1.0},
+    {axis:"Development",value:1.0}
+  ],
   [//kmapper
     {axis:"Design",value:0.80},
     {axis:"Management",value:1.0},
