@@ -62,51 +62,6 @@ let jobs = 	[
   ]
 ];
 
-let projects = [
-  [//spicker
-    {axis:"Design",value:0.20},
-    {axis:"Management",value:0.3},
-    {axis:"Data / Content",value:1.0},
-    {axis:"Development",value:1.0}
-  ],
-  [//e-editiones
-    {axis:"Design",value:0.50},
-    {axis:"Management",value:0.1},
-    {axis:"Data / Content",value:1.0},
-    {axis:"Development",value:1.0}
-  ],
-  [//Machine Reasoning
-    {axis:"Design",value:0.60},
-    {axis:"Management",value:0.1},
-    {axis:"Data / Content",value:0.1},
-    {axis:"Development",value:1.0}
-  ],
-  [//Python
-    {axis:"Design",value:0.0},
-    {axis:"Management",value:0.1},
-    {axis:"Data / Content",value:0.1},
-    {axis:"Development",value:1.0}
-  ],
-  [//Visualization
-    {axis:"Design",value:0.8},
-    {axis:"Management",value:0.1},
-    {axis:"Data / Content",value:0.8},
-    {axis:"Development",value:1.0}
-  ],
-  [//kmapper
-    {axis:"Design",value:1.0},
-    {axis:"Management",value:1.0},
-    {axis:"Data / Content",value:1.0},
-    {axis:"Development",value:1.0}
-  ],
-  [//SVM
-    {axis:"Design",value:0.1},
-    {axis:"Management",value:0.8},
-    {axis:"Data / Content",value:1.0},
-    {axis:"Development",value:1.0}
-  ]
-];
-
 let schools = 	[
   	[//Master
   		{axis:"Science",value:1.0},
@@ -172,7 +127,6 @@ let schoolChartOptions = {
 
 // Call functions to draw the radar charts
 radarChart("#experienceChart", jobs, jobChartOptions);
-radarChart("#projectChart", projects, projectChartOptions);
 radarChart("#educationChart", schools, schoolChartOptions);
 
 // Call mouse events
@@ -189,22 +143,20 @@ d3.select("#job_0").style("background-color", "#E9EBEA");
 let fixmeExperience = $("#experienceChart").offset().top;
 $(window).scroll(function() {
     let currentScroll = $(window).scrollTop();
-    if (currentScroll >= fixmeExperience && currentScroll < 1650) {
+    let thePxPos = 2390;
+    if (currentScroll >= fixmeExperience && currentScroll < thePxPos) {
         $("#experienceChart").css({
             position: "fixed",
             top: "0",
-            // left: "50px"
             left: "2%"
         });
         $(".experience").css({
         	float: "right"
         });
-    } else if (currentScroll >= fixmeExperience && currentScroll > 1650) {
+    } else if (currentScroll >= fixmeExperience && currentScroll > thePxPos) {
         $("#experienceChart").css({
             position: "absolute",
-            // top: "1651px",
-            top: "1725px",
-            // left: "50px"
+            top: `${thePxPos}px`,
             left: "2%"
         });
         $(".experience").css({
@@ -216,41 +168,6 @@ $(window).scroll(function() {
         });
        	$(".experience").css({
         	float: "left"
-        });
-    }
-});
-
-// Fix the projects chart when scrolling
-let fixmeProjects = $("#projectChart").offset().top;
-$(window).scroll(function() {
-    let currentScroll = $(window).scrollTop();
-    if (currentScroll >= fixmeProjects && currentScroll < 3370) {
-        $("#projectChart").css({
-            position: "fixed",
-            top: "0",
-            // left: "50px"
-            left: "2%"
-        });
-        $(".projects").css({
-          float: "right"
-        });
-    } else if (currentScroll >= fixmeProjects && currentScroll > 3370) {
-        $("#projectChart").css({
-            position: "absolute",
-            // top: "3370px",
-            top: "3390px",
-            // left: "50px"
-            left: "2%"
-        });
-        $(".projects").css({
-          float: "right"
-        });
-    } else if (currentScroll < fixmeProjects) {
-        $("#projectChart").css({
-            position: "static"
-        });
-        $(".projects").css({
-          float: "left"
         });
     }
 });
