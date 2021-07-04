@@ -2,7 +2,7 @@
 let jobs = 	[
   [//kmapper
     {axis:"Design",value:0.90},
-    {axis:"Management",value:9.0},
+    {axis:"Management",value:0.9},
     {axis:"Data / Content",value:1.0},
     {axis:"Development",value:1.0}
   ],
