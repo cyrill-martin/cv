@@ -1,8 +1,8 @@
 /* Radar chart design created by Nadieh Bremer - VisualCinnamon.com */				
 let jobs = 	[
   [//kmapper
-    {axis:"Design",value:0.80},
-    {axis:"Management",value:1.0},
+    {axis:"Design",value:0.90},
+    {axis:"Management",value:9.0},
     {axis:"Data / Content",value:1.0},
     {axis:"Development",value:1.0}
   ],
@@ -13,7 +13,7 @@ let jobs = 	[
     {axis:"Development",value:1.0}
   ],
   [//Tool Coordinator and Developer
-  	{axis:"Design",value:0.40},
+  	{axis:"Design",value:0.50},
   	{axis:"Management",value:0.15},
   	{axis:"Data / Content",value:1.0},
   	{axis:"Development",value:1.0}
@@ -26,39 +26,39 @@ let jobs = 	[
   ],
   [//Strategic Competence Lead
   	{axis:"Design",value:0.00},
-  	{axis:"Management",value:0.70},
+  	{axis:"Management",value:1.00},
   	{axis:"Data / Content",value:0.90},
-  	{axis:"Development",value:0.50}
+  	{axis:"Development",value:0.60}
   ],
   [//Head of Marketing Online & Databases
   	{axis:"Design",value:0.00},
-  	{axis:"Management",value:0.80},
-  	{axis:"Data / Content",value:0.90},
+  	{axis:"Management",value:1.00},
+  	{axis:"Data / Content",value:1.00},
   	{axis:"Development",value:0.40}
   ],
   [//eContent & ePartner
   	{axis:"Design",value:0.00},
-  	{axis:"Management",value:0.10},
-  	{axis:"Data / Content",value:0.90},
+  	{axis:"Management",value:0.30},
+  	{axis:"Data / Content",value:1.00},
   	{axis:"Development",value:0.50}
   ],
   [//Scientific proofreader
   	{axis:"Design",value:0.00},
   	{axis:"Management",value:0.10},
-  	{axis:"Data / Content",value:0.90},
+  	{axis:"Data / Content",value:1.00},
   	{axis:"Development",value:0.0}
   ],
   [//Project associate
   	{axis:"Design",value:0.60},
   	{axis:"Management",value:0.00},
-  	{axis:"Data / Content",value:0.40},
+  	{axis:"Data / Content",value:0.60},
   	{axis:"Development",value:0.10}
   ],
   [//Scientific associate
   	{axis:"Design",value:0.00},
   	{axis:"Management",value:0.00},
   	{axis:"Data / Content",value:0.85},
-  	{axis:"Development",value:0.15}		
+  	{axis:"Development",value:0.15}
   ]
 ];
 
